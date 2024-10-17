@@ -29,9 +29,9 @@ const BookCard = ({ book }) => {
               : book.description}
           </p>
           <p className="font-medium mb-5">
-            {book.newPrice}{" "}
+            {`$${book.newPrice}`}
             <span className="line-through font-normal ml-2">
-              {book.oldPrice}
+            {`$${book.oldPrice}`}
             </span>
           </p>
           <button className="btn-primary px-6 space-x-1 flex items-center gap-1 ">
