@@ -50,7 +50,7 @@ const news = [
 const News = () => {
   return (
     <div className="py-16">
-      <h2 className="text-3xl font-semibold mb-6">News</h2>
+      <h2 className="text-3xl font-semibold">News</h2>
 
       {/* swiper js feature */}
       <Swiper
@@ -80,7 +80,7 @@ const News = () => {
       >
         {news.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="flex flex-col sm:flex-row sm:justify-between items-center gap-12">
+            <div className="flex flex-col sm:flex-row sm:justify-between items-center gap-12 py-4">
               {/* content */}
               <div className="py-4">
                 <Link to="/">

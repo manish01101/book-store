@@ -5,7 +5,7 @@ import { FiShoppingCart } from "react-icons/fi";
 
 const BookCard = ({ book }) => {
   return (
-    <div className=" rounded-lg transition-shadow duration-300">
+    <div className=" rounded-lg transition-shadow duration-300 py-6">
       <div className="flex flex-col sm:flex-row sm:items-center sm:h-72  sm:justify-center gap-4">
         <div className="sm:h-72 sm:flex-shrink-0 border rounded-md">
           <Link to={`/books/${book._id}`}>
@@ -31,7 +31,7 @@ const BookCard = ({ book }) => {
           <p className="font-medium mb-5">
             {`$${book.newPrice}`}
             <span className="line-through font-normal ml-2">
-            {`$${book.oldPrice}`}
+              {`$${book.oldPrice}`}
             </span>
           </p>
           <button className="btn-primary px-6 space-x-1 flex items-center gap-1 ">
