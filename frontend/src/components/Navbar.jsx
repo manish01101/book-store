@@ -15,7 +15,7 @@ const navigation = [
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const currentUser = "manish";
+  const currentUser = "";
 
   return (
     <header className="max-w-screen-2xl mx-auto px-4 py-6">
@@ -70,7 +70,7 @@ const Navbar = () => {
                 )}
               </>
             ) : (
-              <Link to={"/login"}>
+              <Link to={"/signin"}>
                 <HiMiniUserCircle className="size-6" />
               </Link>
             )}
