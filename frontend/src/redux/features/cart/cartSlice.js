@@ -17,9 +17,9 @@ const cartSlice = createSlice({
         Swal.fire({
           position: "top-end",
           icon: "success",
-          title: "Prodect Added to Cart",
+          title: "Item Added to Cart",
           showConfirmButton: false,
-          timer: 1500,
+          timer: 1000,
         });
       } else {
         Swal.fire({
@@ -27,13 +27,35 @@ const cartSlice = createSlice({
           icon: "warning",
           title: "Item already exists",
           showConfirmButton: false,
-          timer: 1500,
+          timer: 1000,
         });
       }
+    },
+    removeFromCart: (state, action) => {
+      state.cartItems = state.cartItems.filter(
+        (item) => item._id !== action.payload._id
+      );
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Item removed successfully!",
+        showConfirmButton: false,
+        timer: 1000,
+      });
+    },
+    clearCart: (state) => {
+      state.cartItems = [];
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Cart cleared successfully!",
+        showConfirmButton: false,
+        timer: 1000,
+      });
     },
   },
 });
 
 // export the actions
-export const { addToCart } = cartSlice.actions;
+export const { addToCart, removeFromCart, clearCart } = cartSlice.actions;
 export default cartSlice.reducer;
