@@ -15,7 +15,7 @@ const cartSlice = createSlice({
       if (!existingItem) {
         state.cartItems.push(action.payload);
         Swal.fire({
-          position: "top-end",
+          position: "middle",
           icon: "success",
           title: "Item Added to Cart",
           showConfirmButton: false,
@@ -23,7 +23,7 @@ const cartSlice = createSlice({
         });
       } else {
         Swal.fire({
-          position: "top-end",
+          position: "middle",
           icon: "warning",
           title: "Item already exists",
           showConfirmButton: false,
@@ -36,7 +36,7 @@ const cartSlice = createSlice({
         (item) => item._id !== action.payload._id
       );
       Swal.fire({
-        position: "top-end",
+        position: "middle",
         icon: "success",
         title: "Item removed successfully!",
         showConfirmButton: false,
@@ -46,7 +46,7 @@ const cartSlice = createSlice({
     clearCart: (state) => {
       state.cartItems = [];
       Swal.fire({
-        position: "top-end",
+        position: "middle",
         icon: "success",
         title: "Cart cleared successfully!",
         showConfirmButton: false,
